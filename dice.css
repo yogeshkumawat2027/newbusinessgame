@@ -1,0 +1,147 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+} */
+.diceBox1{
+     border-radius: 50%;
+     /* animation: move1 1s linear infinite; */
+     padding: 1rem;
+     
+}
+@keyframes move1{
+    0% {
+    
+        border: 0.25rem solid rgb(178, 110, 68);
+    }
+    50% {
+        
+        border: 0.25rem solid rgb(103, 68, 178);
+    }
+    100% {
+        
+        border: 0.25rem solid rgb(156, 178, 68);
+    }
+}
+.diceBox2{
+    border-radius: 50%;
+    /* animation: move1 1s linear infinite; */
+    padding: 1rem;
+}
+@keyframes move2{
+   0% {
+   
+       border: 0.25rem solid rgb(178, 110, 68);
+   }
+   50% {
+       
+       border: 0.25rem solid rgb(103, 68, 178);
+   }
+   100% {
+       
+       border: 0.25rem solid rgb(156, 178, 68);
+   }
+}
+
+
+
+
+.dice-container {
+    perspective: 1000px;
+     
+}
+
+.dice{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s ease-out;
+    cursor: pointer;
+      /* Rounded corners */
+}
+.dice2 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s ease-out;
+    cursor: pointer;
+      /* Rounded corners */
+}
+/* Dot Positions */
+
+
+.face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+      /* Rounded corners */
+}
+
+.dot {
+    margin: 1rem;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+
+.face1 { transform: rotateY(0deg) translateZ(25px); 
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face2 { transform: rotateY(180deg) translateZ(25px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+     
+    
+}
+.face3 { transform: rotateX(90deg) translateZ(25px);
+    display: flex;
+gap: 0.5rem;
+ 
+ }
+.face4 { transform: rotateX(-90deg) translateZ(25px);
+display: flex;
+ 
+gap: 0.5rem; }
+.face5 { transform: rotateY(90deg) translateZ(25px); 
+    display: flex;
+     
+    
+}
+.face5 .leftDot5 ,.face5 .rightDot5 , .face4 .rightDot4 ,.face4 .leftDot4,.face3 .topDot3{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+} 
+.face6 { transform: rotateY(-90deg) translateZ(25px);
+    display: flex;
+    gap: 0.2rem;
+     
+  }
+  @media (width<=1200px){
+    .diceBox1,.diceBox2{
+        padding: 0.5rem;
+    }
+    
+  }

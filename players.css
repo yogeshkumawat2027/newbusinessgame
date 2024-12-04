@@ -1,0 +1,190 @@
+.player1,.player2{
+    display: flex;
+    flex-direction: column;
+    font-family: "Quantico", sans-serif;
+    border: 5px solid yellow;
+    gap: 0.25rem;
+}
+.player1-img ,.player2-img{
+    position: relative;
+    top: 0.1rem;
+    height: 25%;
+    width: 99%;
+   
+    border-radius: 1rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.player2-img{
+    background-color:#67e2fbc8;
+}
+.player1-img{
+    background-color: rgba(15, 237, 56, 0.744);
+}
+
+.player1-img p,.player2-img p{
+    font-size: 2rem;
+    color: #fff;
+}
+.greenStamp{
+    background-image: url('./assets/greenStamp.JPG');
+    background-size: cover;
+    border: 2px solid rgb(30, 228, 30);
+}
+.blueStamp{
+    background-image: url('./assets/blueStamp.JPG');
+    background-size: cover;
+    border: 2px solid rgb(0, 132, 255);
+}
+.stamp{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.player1-dice-img , .player2-dice-img{
+    height: 2.75rem;
+    width: 2.75rem;
+    margin: 0;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player1-dice-img {
+    background-image: url('assets/greenAeroplane.jpeg');
+    background-size: cover;
+}
+.player2-dice-img{
+    background-image: url('./assets/aquaAeroplane.jpeg');
+    background-size: cover;
+}
+.player1-balance ,.player2-balance{
+    height: 20%;
+    position: relative;
+    top: 0.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+.player1-buttons ,.player2-buttons{
+    height: 3rem;
+    width: 100%rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 1rem; 
+    align-items: center;  
+}
+.buybtn1 , .skipbtn1 ,.buybtn2 , .skipbtn2{
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    opacity:1;
+    z-index: 3;
+}
+.buybtn1 , .skipbtn1{
+    background-color: rgb(15, 237, 56);
+    opacity: 1;
+    animation: moveupdown 1s infinite;
+}
+
+.buybtn2 , .skipbtn2{
+    opacity: 1;
+    background-color: #67e3fb;
+    animation: moveupdown 1s linear infinite;
+}
+@keyframes moveupdown{
+    0% {
+    
+        border: 2px solid rgb(178, 110, 68);
+    }
+    50% {
+        
+        border: 2px solid rgb(103, 68, 178);
+    }
+    100% {
+        
+        border: 2px solid rgb(156, 178, 68);
+    }
+}
+.buybtn1 p{
+    padding: 0;
+    margin: 0;
+}
+.player1-notice ,.player2-notice{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+.player1 .dice1{
+    height: 50px;
+    width: 50px;   
+}
+
+/* player 2 */
+.player2{
+    transform: rotate(180deg);
+      transform-style: preserve-3d; /* Preserve 3D context for children */
+      position: relative;
+}
+
+
+
+
+@media(width>1200px){
+    .player2{
+        transform: rotate(0deg);
+         transform-style: preserve-3d; /* Preserve 3D context for children */
+      position: relative;
+    }
+    .player1-buttons ,.player2-buttons{
+        height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 1rem;      
+    }
+    .stamp{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+      
+    }
+    .player1-dice-img , .player2-dice-img{
+        bottom:0rem;
+    }
+    .player1-buttons ,.player2-buttons{
+        position: relative;
+        top: 2rem;
+        cursor: pointer;
+        height: 40px;
+    }
+    .player1-dice-img , .player2-dice-img{
+        height: 80%;
+        width: 4rem;
+    }
+    
+}
+@media (width<=1200px) {
+    
+    
+}
