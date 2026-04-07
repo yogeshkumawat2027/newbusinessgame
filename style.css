@@ -3,15 +3,16 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .main{
     margin: 0;
     padding: 0;
-    position:absolute;
+  position:relative;
     
     width: 100%;
-    height:100vh ;
+  min-height:100vh ;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -493,6 +494,7 @@ button:hover {
       
     }
     .player1, .player2{
+
         height:22vh;
         width: 300px;
         background-image: url('./assets/playerBg.jpeg');
@@ -555,4 +557,151 @@ button:hover {
       display: none;
     } */
 
+}
+
+.seo-section{
+  width: 100%;
+  padding: 4rem 1.25rem 5rem;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(5, 12, 24, 0.98), rgba(9, 17, 31, 0.98));
+  color: #eef3ff;
+}
+
+.seo-shell{
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.seo-kicker{
+  margin: 0;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #79d8ff;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.seo-section h1,
+.seo-section h2{
+  margin: 0;
+  font-family: "Montserrat", "Open Sans", Arial, sans-serif;
+}
+
+.seo-section h1{
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.seo-intro,
+.seo-card p,
+.seo-faq p{
+  margin: 0;
+  color: rgba(238, 243, 255, 0.86);
+  line-height: 1.7;
+}
+
+.seo-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.seo-card,
+.seo-faq details{
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1.1rem 1.15rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.seo-card h2{
+  font-size: 1.08rem;
+  margin-bottom: 0.5rem;
+}
+
+.seo-faq{
+  display: grid;
+  gap: 0.75rem;
+}
+
+.seo-faq h2{
+  font-size: 1.2rem;
+}
+
+.seo-faq summary{
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.seo-faq summary::-webkit-details-marker{
+  display: none;
+}
+
+.seo-faq details[open]{
+  background: rgba(121, 216, 255, 0.12);
+}
+
+.seo-faq details p{
+  margin-top: 0.75rem;
+}
+
+.play-game-btn{
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  text-decoration: none;
+  font-weight: 700;
+  color: #061225;
+  background: linear-gradient(120deg, #7df2c4, #78daff, #b4e2ff);
+  box-shadow: 0 8px 24px rgba(120, 218, 255, 0.25);
+  animation: playGamePulse 2.1s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.play-game-btn:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(120, 218, 255, 0.38);
+}
+
+.play-game-btn:active{
+  transform: translateY(0);
+}
+
+.play-game-btn-bottom{
+  justify-self: center;
+}
+
+@keyframes playGamePulse{
+  0%{
+    box-shadow: 0 8px 24px rgba(120, 218, 255, 0.25);
+  }
+  50%{
+    box-shadow: 0 14px 34px rgba(125, 242, 196, 0.48);
+  }
+  100%{
+    box-shadow: 0 8px 24px rgba(120, 218, 255, 0.25);
+  }
+}
+
+@media (max-width: 900px){
+  .seo-section{
+    padding: 3rem 1rem 4rem;
+  }
+
+  .seo-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .play-game-btn,
+  .play-game-btn-bottom{
+    justify-self: center;
+  }
 }
