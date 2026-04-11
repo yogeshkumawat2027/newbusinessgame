@@ -1,5 +1,10 @@
 {
   "routes": [
+    {
+      "src": "/http:businessgame.fun/sitemap\\.xml",
+      "dest": "/sitemap.xml",
+      "status": 308
+    },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" }
   ]
 }
