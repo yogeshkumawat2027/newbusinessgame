@@ -1,10 +1,14 @@
 {
-  "routes": [
+  "redirects": [
     {
-      "src": "/http:businessgame.fun/sitemap\\.xml",
-      "dest": "/sitemap.xml",
-      "status": 308
+      "source": "/http://127.0.0.1:5500/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
     },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" }
+    {
+      "source": "/http:businessgame.fun/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
   ]
 }
