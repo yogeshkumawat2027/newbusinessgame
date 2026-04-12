@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://businessgame.fun/sitemap.xml
+Sitemap: https://www.businessgame.fun/sitemap.xml
