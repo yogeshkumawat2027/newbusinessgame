@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.businessgame.fun"
+        }
+      ],
+      "destination": "https://businessgame.fun/$1",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    }
+  ]
+}
